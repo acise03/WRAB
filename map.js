@@ -1,7 +1,8 @@
 const CN_TOWER = {lat: 43.64269, lon: -79.38705}
+import { API_KEY } from 'SECRET.js';
 
 var map = tt.map({
-    key: 'i58bnGL2TYgPbRmsWNAAI4vy2fc5gkIT',
+    key: API_KEY,
     container: 'map',
     center: CN_TOWER,
     zoom: 10,
