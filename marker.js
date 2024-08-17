@@ -18,7 +18,38 @@ document.addEventListener('DOMContentLoaded', function () {
 
 });
 
-const marker_data = [];
+const marker_data = [
+    {
+        "lat": 43.90691488643688,
+        "lng": -79.43265008926438,
+        "type": "waterFountain.png"
+    },
+    {
+        "lat": 43.90273360044873,
+        "lng": -79.43924041964709,
+        "type": "washroom.png"
+    },
+    {
+        "lat": 43.89416916908877,
+        "lng": -79.44163397813762,
+        "type": "electricalOutlet.png"
+    },
+    {
+        "lat": 43.90303565410969,
+        "lng": -79.43744353247858,
+        "type": "playground.png"
+    },
+    {
+        "lat": 43.90170408271908,
+        "lng": -79.43232710931164,
+        "type": "openField.png"
+    },
+    {
+        "lat": 43.89537517312877,
+        "lng": -79.44312656330553,
+        "type": "washroom.png"
+    }
+];
 
 
 function saveLocation() {
@@ -34,6 +65,7 @@ function saveLocation() {
             type: selected
         })
         saved();
+        console.log(marker_data);
     }
 }
 
