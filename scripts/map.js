@@ -1,5 +1,5 @@
-const CN_TOWER = {lat: 43.64269, lon: -79.38705}
-import { API_KEY } from './SECRET.js';
+const CN_TOWER = { lat: 43.64269, lon: -79.38705 }
+import { API_KEY } from './SECRET';
 
 var map = tt.map({
     key: API_KEY,
