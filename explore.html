@@ -38,18 +38,21 @@
                 <button type="button" class="button-5" role="button" onclick="addMarker()">ADD A NEW HOTSPOT</button>
                 <br>
 
-                <select id="markerDropdown">
-                    <option value="waterFountain.png">Water Fountain</option>
-                    <option value="washroom.png">Washroom</option>
-                    <option value="electricalOutlet.png">Electrical Outlet</option>
-                    <option value="playground.png">Playground</option>
-                    <option value="openField.png">Open Field</option>
-                </select>
                 <BR>
                 <button type="button" class="button-5" role="button" onclick="saveLocation()">SAVE THIS
                     LOCATION</button>
+                <br>
                     <button type="button" class="button-5" role="button" onclick="del()">DELETE THIS MARKER</button>
-                <button type="button" class="button-5" role="button" onclick="showMarkers()">SHOW/HIDE MARKERS</button>
+                <br><button type="button" class="button-5" role="button" onclick="showMarkers()">SHOW/HIDE MARKERS</button>
+                
+                <select id="markerDropdown" class="markerDropdown">
+                    <option value ="" selected disabled>SELECT</option>
+                    <option value="waterFountain.png">WATER FOUNTAIN</option>
+                    <option value="washroom.png">WASHROOM</option>
+                    <option value="electricalOutlet.png">ELECTRICAL OUTLET</option>
+                    <option value="playground.png">PLAYGROUND</option>
+                    <option value="openField.png">OPEN FIELD</option>
+                </select>
 
             </section>
         </div>
