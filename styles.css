@@ -1,6 +1,6 @@
 /* General Styles */
 body {
-	font-family:Avant Garde,Avantgarde,Century Gothic,CenturyGothic,AppleGothic,sans-serif;   
+    font-family:'Questrial';
     margin: 0;
     padding: 0;
     background-color: #EBEBEB;
@@ -24,7 +24,6 @@ header nav ul {
 }
 
 header nav ul li {
-
     display: inline-block;
     margin-left: 20px;
 }
@@ -116,7 +115,6 @@ header nav ul li a:hover {
 }
 
 footer {
-    font-family: Questrial;
     text-align: center;
     padding: 20px;
     background-color: #52489C;
