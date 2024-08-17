@@ -95,7 +95,7 @@ function addMarker() {
     }
 
     marker = new tt.Marker({
-        element: createMarkerElement(document.getElementById('markerDropdown').value)
+        element: createMarkerElement("images/" + document.getElementById('markerDropdown').value)
     })
         .setLngLat(map.getCenter())
         .addTo(map)
