@@ -38,48 +38,10 @@
         <div id="map" style="width: 100%; height: 600px;"></div>
         <script>
             var map = tt.map({
-                key: "",
+                key: "iJhhowAaIrAcbRVdJLMHfrj5e4v2VekB",
                 container: "map",
-                center: [-79.440304, 43.903823],
+                center:  [-79.43898010253906, 43.903018951416016],
                 zoom: 14
-            });
-
-            var routeGeoJson = {
-                "type": "FeatureCollection",
-                "features": [
-                    {
-                        "type": "Feature",
-                        "geometry": {
-                            "type": "LineString",
-                            "coordinates": [
-                                [-79.440304, 43.903823],
-                                [-79.433880, 43.899800]
-                            ]
-                        },
-                        "properties": {
-                            "name": "My Running Route"
-                        }
-                    }
-                ]
-            };
-
-            map.on('load', function () {
-                map.addLayer({
-                    id: 'route',
-                    type: 'line',
-                    source: {
-                        type: 'geojson',
-                        data: routeGeoJson
-                    },
-                    layout: {
-                        'line-join': 'round',
-                        'line-cap': 'round'
-                    },
-                    paint: {
-                        'line-color': '#FF0000',
-                        'line-width': 5
-                    }
-                });
             });
 
         </script>
