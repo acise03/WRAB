@@ -1,14 +1,25 @@
-let imageUrl = '';
 let map;
 let marker;
 let showOrHide = false;
 let deleatble = false;
 let shownMarkers = [];
 function toggleMode() {
-    alert(`Drag the logo`);
+    newtoggleMode("Drag the logo");
 }
+
+function newtoggleMode(message) {
+    let toastBox = document.getElementById('toastBox');
+    let toast = document.createElement('div');
+    toast.classList.add('toast');
+    toast.innerHTML = '<i class="fa-solid fa-arrow-pointer"></i>' + message;
+    toastBox.appendChild(toast);
+    setTimeout(() => { toast.remove(); }, 3000);
+}
+
+
+
 function saved() {
-    alert("The marker has been saved.");
+    newtoggleMode("The marker has been saved.");
 }
 function del() {
     if (deleatble) {
@@ -17,7 +28,7 @@ function del() {
 
     }
     else {
-        alert("There is no marker to be deleted.")
+        newtoggleMode("There is no marker to be deleted.");
     }
 }
 
@@ -67,8 +78,7 @@ const marker_data = [
 
 function saveLocation() {
     if (!deleatble) {
-        alert("There is no marker to be saved.")
-
+        newtoggleMode("There is no marker to be saved.");
     }
     else if (marker) {
         const lngLat = marker.getLngLat();
@@ -95,7 +105,7 @@ function addMarker() {
     }
 
     marker = new tt.Marker({
-        element: createMarkerElement(document.getElementById('markerDropdown').value)
+        element: createMarkerElement("../images/" + document.getElementById('markerDropdown').value)
     })
         .setLngLat(map.getCenter())
         .addTo(map)
@@ -106,13 +116,12 @@ function addMarker() {
 
 
 document.getElementById('markerDropdown').addEventListener('change', function (event) {
-    imageUrl = event.target.value;
-
     if (marker) {
         marker.remove();
     }
     marker = new tt.Marker({
-        element: createMarkerElement(imageUrl)
+        element: createMarkerElement("../images/" + document.getElementById('markerDropdown').value)
+
     })
         .setLngLat(marker ? marker.getLngLat() : [-79.43898010253906, 43.903018951416016])
         .addTo(map);
@@ -142,7 +151,7 @@ function showMarkers() {
     else { //false means markers are hidden
         marker_data.forEach(markerr => {
             const mark = new tt.Marker({
-                element: createMarkerElement(markerr.type)
+                element: createMarkerElement("../images/" + markerr.type)
             })
                 .setLngLat([markerr.lng, markerr.lat])
                 .addTo(map)

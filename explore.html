@@ -20,7 +20,7 @@
         <nav>
             <ul>
                 <li>
-                    <h1>WRAB</h1>
+                    <h1>WARB</h1>
                 </li>
                 <li><a href="index.html">HOME</a></li>
                 <li><a href="create.html">CREATE A ROUTE</a></li>
@@ -32,8 +32,6 @@
     </header>
 
     <script src="scripts/marker.js"></script>
-
-    <div id="toastBox"></div>
 
     <div class="container2">
         <div class="options">
@@ -50,12 +48,11 @@
                     MARKERS</button>
 
                 <select id="markerDropdown" class="dropdown">
-                    <option value="" selected disabled>SELECT</option>
-                    <option value="images/waterFountain.png">WATER FOUNTAIN</option>
-                    <option value="images/washroom.png">WASHROOM</option>
-                    <option value="images/electricalOutlet.png">ELECTRICAL OUTLET</option>
-                    <option value="images/playground.png">PLAYGROUND</option>
-                    <option value="images/openField.png">OPEN FIELD</option>
+                    <option value="waterFountain.png">WATER FOUNTAIN</option>
+                    <option value="washroom.png">WASHROOM</option>
+                    <option value="electricalOutlet.png">ELECTRICAL OUTLET</option>
+                    <option value="playground.png">PLAYGROUND</option>
+                    <option value="openField.png">OPEN FIELD</option>
                 </select>
 
             </section>
@@ -65,6 +62,11 @@
         </div>
 
     </div>
+
+    <section class="information">
+        <div id="toastBox"></div>
+        <h1>Route Distance: <span id="routeDistance">0</span> km</h1>
+    </section>
 
     <footer>
         <p>By Grace, Jessica, Olivia and Sophia</p>
