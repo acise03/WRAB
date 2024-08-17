@@ -1,9 +1,14 @@
 /* General Styles */
 
 body {
+<<<<<<< Updated upstream
     margin-left: 20px;
     margin-top: 20px;
 	font-family: Antic;  
+=======
+    font-family:'Questrial';
+    font-family: Antic;
+>>>>>>> Stashed changes
     margin: 0;
     padding: 0;
     background-color: #EBEBEB;
@@ -136,3 +141,7 @@ footer {
     position: relative;
     margin-bottom: 20px;
 }
+<<<<<<< Updated upstream
+=======
+}
+>>>>>>> Stashed changes
