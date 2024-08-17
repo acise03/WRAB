@@ -15,6 +15,7 @@
 </head>
 
 <body>
+    <!-- Header Section -->
     <header>
         <nav>
             <h1>WABR</h1>
@@ -22,7 +23,7 @@
                 <li><a href="homepage.html">HOME</a></li>
                 <li><a href="add.html">ADD</a></li>
                 <li><a href="addARoute.html">ADD A ROUTE</a></li>
-                <li><a href="#">EXPLORE</a></li>
+                <li><a href="routes.html">ROUTES</a></li>
                 <li><a href="#">LOGIN</a></li>
             </ul>
         </nav>
@@ -30,11 +31,16 @@
 
     <section class="input-route">
         <form id="routeForm">
+            <label for="routeName">Route Name:</label>
+            <input type="text" id="routeName" name="routeName" placeholder="Route Name">
+            <br>
             <label for="startCoord">Start Coordinate:</label>
-            <input type="text" id="startCoord" name="startCoord" placeholder="LONGITUDE, LATITUDE" required>
+            <input type="text" id="startCoord" name="startCoord" placeholder="LONGITUDE, LATITUDE">
+            <button id="startCoordButton">Choose on Map</button>
             <br>
             <label for="endCoord">End Coordinate:</label>
-            <input type="text" id="endCoord" name="endCoord" placeholder="LONGITUDE, LATITUDE" required>
+            <input type="text" id="endCoord" name="endCoord" placeholder="LONGITUDE, LATITUDE">
+            <button id="endCoordButton">Choose on Map</button>
             <br>
             <button type="button" onclick="addRoute()">Add Route</button>
         </form>
@@ -46,14 +52,14 @@
             var map = tt.map({
                 key: "iJhhowAaIrAcbRVdJLMHfrj5e4v2VekB",
                 container: "map",
-                center: [-79.43898010253906, 43.903018951416016],
+                center: [-79.43994494509955, 43.90274206488957],
                 zoom: 14
             });
 
 
         </script>
     </section>
-    <script src="script.js"></script>
+    <script src="addRoute.js"></script>
 
     <footer>
         <p>By Grace, Jessica, Olivia and Sophia</p>
