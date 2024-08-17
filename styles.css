@@ -135,6 +135,10 @@ header nav ul li a:hover {
     margin: 30px;
 }
 
+.information {
+    margin: 30px;
+}
+
 .input-route {
     margin: 30px;
 }
@@ -223,12 +227,14 @@ footer {
 .joes-map {
     display: block;
 }
-.container2{
+
+.container2 {
     display: flex;
     width: 100%;
 }
-#options{
-    width:25%;
+
+#options {
+    width: 25%;
     height: 600PX;
 }
 
