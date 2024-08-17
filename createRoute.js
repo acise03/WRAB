@@ -3,8 +3,14 @@ const API_KEY = 'iJhhowAaIrAcbRVdJLMHfrj5e4v2VekB';
 
 function toggleMode(button) {
     mode = button;
-    alert(`Choose ${button} on map.`);
+    let toastBox = document.getElementById('toastBox');
+    let toast = document.createElement('div');
+    toast.classList.add('toast');
+    toast.innerHTML = '<i class="fa-solid fa-arrow-pointer"></i> Click on the map!';
+    toastBox.appendChild(toast);
+    setTimeout(() => { toast.remove(); }, 3000);
 }
+
 
 map.on('click', (event) => {
     if (mode) {

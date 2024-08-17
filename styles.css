@@ -266,7 +266,8 @@ footer {
     vertical-align: baseline;
     width: auto;
 }
-.markerDropdown{
+
+.markerDropdown {
     align-items: center;
     background-clip: padding-box;
     background-color: #52489C;
@@ -307,7 +308,7 @@ footer {
 
 }
 
-.button-5:hover{
+.button-5:hover {
     background-color: #837cbb;
     box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
 }
@@ -322,6 +323,61 @@ footer {
     transform: translateY(0);
 }
 
+
+#toastBox {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.toast {
+    font-family: Avant Garde, Avantgarde, Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    width: 250px;
+    height: 80px;
+    background: #fff;
+    font-weight: 750;
+    margin: 100px 0;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    position: relative;
+    transform: translateX(100%);
+    animation: moveleft 0.3s linear forwards;
+}
+
+@keyframes moveleft {
+    100% {
+        transform: translateX(0)
+    }
+}
+
+.toast i {
+    margin: 0 20px;
+    font-size: 35px;
+    color: #52489C;
+}
+
+.toast::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 5px;
+    background: rgb(42, 162, 188);
+    animation: anim 3s linear forwards;
+}
+
+@keyframes anim {
+    100% {
+        width: 0;
+    }
+}
 
 .map {
     width: 100%;
