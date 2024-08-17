@@ -48,4 +48,6 @@ async function addRoute() {
         },
     })
 
+    const distanceText = document.getElementById("routeDistance");
+    distanceText.textContent = newRouteGeoJson.features[0].properties.summary.lengthInMeters / 1000.0;
 }
