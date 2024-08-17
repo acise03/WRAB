@@ -1,18 +1,96 @@
 /* General Styles */
 
 body {
-<<<<<<< Updated upstream
-    margin-left: 20px;
-    margin-top: 20px;
-	font-family: Antic;  
-=======
-    font-family:'Questrial';
     font-family: Antic;
->>>>>>> Stashed changes
-    margin: 0;
+    margin: 40;
     padding: 0;
     background-color: #EBEBEB;
 }
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    background: #55d6aa;
+}
+
+header::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+
+.logo {
+    float: left;
+    padding: 10px 0;
+}
+
+nav {
+    float: right;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 70px;
+    padding-top: 23px;
+
+    position: relative;
+}
+
+nav a {
+    color: #444;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #000;
+}
+
+nav a::before {
+    content: '';
+    display: block;
+    height: 5px;
+    background-color: #59C3C3;
+
+    position: absolute;
+    top: 0;
+    width: 0%;
+
+    transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+    width: 100%;
+}
+/* 
+
+nav a:hover {
+    color: #000
+}
+
+nav a::before {
+    content: '';
+    display: block;
+    height: 5px;
+    background-color: #000;
+
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+} */
+
 
 header {
     background-color: #52489C;
@@ -23,6 +101,7 @@ header {
 header h1 {
     font-family: Bowlby One SC;
     display: inline-block;
+    text-align: left;
     margin-left: 20px;
 }
 
@@ -36,6 +115,8 @@ header nav ul li {
 
     display: inline-block;
     margin-left: 20px;
+
+    position: relative;
 }
 
 header nav ul li a {
@@ -64,6 +145,10 @@ header nav ul li a:hover {
 .welcome p {
     font-size: 1.2em;
     margin-bottom: 30px;
+}
+
+.dropdowns {
+    margin: 30px;
 }
 
 .cta-button {
@@ -121,7 +206,7 @@ header nav ul li a:hover {
 }
 
 .view-route:hover {
-    background-color:#84A98C;
+    background-color: #84A98C;
 }
 
 footer {
@@ -141,7 +226,3 @@ footer {
     position: relative;
     margin-bottom: 20px;
 }
-<<<<<<< Updated upstream
-=======
-}
->>>>>>> Stashed changes
