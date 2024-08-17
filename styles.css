@@ -223,15 +223,13 @@ footer {
 .joes-map {
     display: block;
 }
-
-.container {
+.container2{
     display: flex;
     width: 100%;
 }
-
-#options {
-    width: 25%;
-    height: 400px;
+#options{
+    width:25%;
+    height: 600PX;
 }
 
 .button-5 {
@@ -265,7 +263,7 @@ footer {
 
 #exploreMap {
     width: 75%;
-    height: 400px;
+    height: 600PX;
     margin-left: auto;
     margin-right: 0;
     display: block;
@@ -291,7 +289,7 @@ footer {
 
 .map {
     width: 100%;
-    height: 400px;
+    height: 600px;
     position: relative;
     margin-bottom: 20px;
 }
