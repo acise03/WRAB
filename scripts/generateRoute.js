@@ -4,7 +4,13 @@ const EARTH_R = 6378.137;
 
 function toggleMode(button) {
     mode = button;
-    alert(`Choose ${button} on map.`);
+    let toastBox = document.getElementById('toastBox');
+    let toast = document.createElement('div');
+    toast.classList.add('toast');
+    toast.innerHTML = '<i class="fa-solid fa-arrow-pointer"></i> Click on the map!';
+    toastBox.appendChild(toast);
+    toastAppear = true;
+    setTimeout(() => { toast.remove(); }, 3000);
 }
 
 map.on('click', (event) => {

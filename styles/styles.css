@@ -143,19 +143,6 @@ header nav ul li a:hover {
     margin: 30px;
 }
 
-.cta-button {
-    background-color: #59C3C3;
-    color: #EBEBEB;
-    padding: 15px 30px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 1.2em;
-}
-
-.cta-button:hover {
-    background-color: #59C3C3;
-}
-
 .recent-routes {
     padding: 40px 20px;
     background-color: #EBEBEB;
@@ -238,7 +225,7 @@ footer {
     height: 600PX;
 }
 
-.button-5 {
+.button {
     align-items: center;
     background-clip: padding-box;
     background-color: #52489C;
@@ -267,7 +254,7 @@ footer {
     width: auto;
 }
 
-.markerDropdown {
+.dropdown {
     align-items: center;
     background-clip: padding-box;
     background-color: #52489C;
@@ -308,16 +295,16 @@ footer {
 
 }
 
-.button-5:hover {
+.button:hover {
     background-color: #837cbb;
     box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
 }
 
-.button-5:hover {
+.button:hover {
     transform: translateY(-1px);
 }
 
-.button-5:active {
+.button:active {
     background-color: #52489C;
     box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
     transform: translateY(0);

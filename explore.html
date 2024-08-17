@@ -12,6 +12,7 @@
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Bowlby+One+SC" />
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Antic" />
     <script src="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.25.0/maps/maps-web.min.js"></script>
+    <script src="https://kit.fontawesome.com/caad56e2f4.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -32,21 +33,23 @@
 
     <script src="scripts/marker.js"></script>
 
+    <div id="toastBox"></div>
+
     <div class="container2">
         <div class="options">
             <section class="input-route">
-                <button type="button" class="button-5" role="button" onclick="addMarker()">ADD A NEW HOTSPOT</button>
+                <button type="button" class="button" role="button" onclick="addMarker()">ADD A NEW HOTSPOT</button>
                 <br>
 
                 <BR>
-                <button type="button" class="button-5" role="button" onclick="saveLocation()">SAVE THIS
+                <button type="button" class="button" role="button" onclick="saveLocation()">SAVE THIS
                     LOCATION</button>
                 <br>
-                <button type="button" class="button-5" role="button" onclick="del()">DELETE THIS MARKER</button>
-                <br><button type="button" class="button-5" role="button" onclick="showMarkers()">SHOW/HIDE
+                <button type="button" class="button" role="button" onclick="del()">DELETE THIS MARKER</button>
+                <br><button type="button" class="button" role="button" onclick="showMarkers()">SHOW/HIDE
                     MARKERS</button>
 
-                <select id="markerDropdown" class="markerDropdown">
+                <select id="markerDropdown" class="dropdown">
                     <option value="" selected disabled>SELECT</option>
                     <option value="images/waterFountain.png">WATER FOUNTAIN</option>
                     <option value="images/washroom.png">WASHROOM</option>

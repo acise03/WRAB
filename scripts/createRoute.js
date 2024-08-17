@@ -8,6 +8,7 @@ function toggleMode(button) {
     toast.classList.add('toast');
     toast.innerHTML = '<i class="fa-solid fa-arrow-pointer"></i> Click on the map!';
     toastBox.appendChild(toast);
+    toastAppear = true;
     setTimeout(() => { toast.remove(); }, 3000);
 }
 

@@ -13,7 +13,7 @@
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Antic" />
     <script src="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.25.0/maps/maps-web.min.js"></script>
     <script src="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.25.0/services/services-web.min.js"></script>
-
+    <script src="https://kit.fontawesome.com/caad56e2f4.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -39,7 +39,7 @@
             <input type="text" id="routeName" name="routeName" placeholder="Route Name">
             <br>
             <label for="distance">Select distance: </label>
-            <select id="distance" name="distance">
+            <select id="distance" name="distance" class="dropdown">
                 <option value="1">1k</option>
                 <option value="2">2k</option>
                 <option value="3">3k</option>
@@ -49,13 +49,14 @@
             <br>
             <label for="startCoord">Start Coordinate:</label>
             <input type="text" id="startCoord" name="startCoord" placeholder="LONGITUDE, LATITUDE">
-            <button id="startCoordButton">Choose on Map</button>
+            <button class="button" id="startCoordButton">Choose on Map</button>
             <br>
-            <button type="button" onclick="generateRoute()">Generate Route</button>
+            <button class="button" type="button" onclick="generateRoute()">Generate Route</button>
         </form>
     </section>
 
     <section class="information">
+        <div id="toastBox"></div>
         <h1>Route Distance: <span id="routeDistance">0</span> km</h1>
     </section>
 
