@@ -1,10 +1,41 @@
-var marker = new tt.Marker();
-function toggleMode(button) {
+let imageUrl = '';
+let map;
+let marker;
+function toggleMode() {
     alert(`Drag the logo`);
 }
+function saved(){
+    alert("The marker has been saved.");
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+     map = tt.map({
+        key: "iJhhowAaIrAcbRVdJLMHfrj5e4v2VekB",
+        container: "exploreMap",
+        center: [-79.43898010253906, 43.903018951416016],
+        zoom: 14
+    });
+
+});
+
+const marker_data = [];
 
 
+function saveLocation() {
+    if (marker) {
+        const lngLat = marker.getLngLat();
+        var dd = document.getElementById("markerDropdown");
+        var selected = dd.value;
 
+
+        marker_data.push({
+            lat: lngLat.lat,
+            lng: lngLat.lng,
+            type: selected
+        })
+        saved();
+    }
+}
 
 function addMarker() {
     toggleMode();
@@ -15,7 +46,7 @@ function addMarker() {
     marker = new tt.Marker({
         element: createMarkerElement(document.getElementById('markerDropdown').value)
     })
-        .setLngLat([-79.43898010253906, 43.903018951416016])
+        .setLngLat(map.getCenter())
         .addTo(map)
         .setDraggable(true);
 
@@ -23,7 +54,7 @@ function addMarker() {
 
 
 document.getElementById('markerDropdown').addEventListener('change', function (event) {
-    const imageUrl = event.target.value;
+    imageUrl = event.target.value;
 
     if (marker) {
         marker.remove();
@@ -31,7 +62,7 @@ document.getElementById('markerDropdown').addEventListener('change', function (e
     marker = new tt.Marker({
         element: createMarkerElement(imageUrl)
     })
-        .setLngLat(marker ? marker.getLngLat : [-79.43898010253906, 43.903018951416016])
+        .setLngLat(marker ? marker.getLngLat() : [-79.43898010253906, 43.903018951416016])
         .addTo(map);
 });
 
@@ -46,11 +77,15 @@ function createMarkerElement(imageUrl) {
     return div;
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-    map = tt.map({
-        key: "iJhhowAaIrAcbRVdJLMHfrj5e4v2VekB",
-        container: "map",
-        center: [-79.43898010253906, 43.903018951416016],
-        zoom: 14
-    });
-});
+
+
+
+function showMarkers() {
+    marker_data.forEach(markerr => {
+        new tt.Marker({
+            element: createMarkerElement(markerr.type)
+        })
+            .setLngLat([markerr.lng, markerr.lat])
+            .addTo(map)
+    })
+}
