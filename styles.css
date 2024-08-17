@@ -1,6 +1,10 @@
 /* General Styles */
 body {
+<<<<<<< Updated upstream
     font-family:'Questrial';
+=======
+    font-family: Antic;
+>>>>>>> Stashed changes
     margin: 0;
     padding: 0;
     background-color: #EBEBEB;
@@ -13,6 +17,7 @@ header {
 }
 
 header h1 {
+    font-family: Sigmar One;
     display: inline-block;
     margin-left: 20px;
 }
@@ -119,6 +124,7 @@ footer {
     padding: 20px;
     background-color: #52489C;
     color: #EBEBEB;
+<<<<<<< Updated upstream
 }
 
 .joes-map {
@@ -131,3 +137,6 @@ footer {
     position: relative;
     margin-bottom: 20px;
 }
+=======
+}
+>>>>>>> Stashed changes
