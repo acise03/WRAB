@@ -1,0 +1,122 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #EBEBEB;
+}
+
+header {
+    background-color: #52489C;
+    color: #EBEBEB;
+    padding: 10px 0;
+}
+
+header h1 {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+header nav ul {
+    list-style: none;
+    float: right;
+    margin-right: 20px;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: #EBEBEB;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background 0.3s ease;
+}
+
+header nav ul li a:hover {
+    background-color: #52489C;
+    border-radius: 5px;
+}
+
+.welcome {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #EBEBEB;
+}
+
+.welcome h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.welcome p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    background-color: #59C3C3;
+    color: #EBEBEB;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+}
+
+.cta-button:hover {
+    background-color: #59C3C3;
+}
+
+.recent-routes {
+    padding: 40px 20px;
+    background-color: #EBEBEB;
+}
+
+.recent-routes h3 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.routes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.route-card {
+    background-color: #EBEBEB;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.route-card h4 {
+    margin-bottom: 10px;
+}
+
+.route-card p {
+    color: #52489C;
+    margin-bottom: 15px;
+}
+
+.view-route {
+    background-color: #84A98C;
+    color: #EBEBEB;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.view-route:hover {
+    background-color:#84A98C;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #52489C;
+    color: #EBEBEB;
+}
