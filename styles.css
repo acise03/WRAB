@@ -74,24 +74,6 @@ nav a::before {
 nav a:hover::before {
     width: 100%;
 }
-/* 
-
-nav a:hover {
-    color: #000
-}
-
-nav a::before {
-    content: '';
-    display: block;
-    height: 5px;
-    background-color: #000;
-
-    position: absolute;
-    top: 0;
-    width: 100%;
-
-} */
-
 
 header {
     background-color: #52489C;
@@ -152,6 +134,10 @@ header nav ul li a:hover {
     margin: 30px;
 }
 
+.input-route {
+    margin: 30px;
+}
+
 .cta-button {
     background-color: #59C3C3;
     color: #EBEBEB;
@@ -173,6 +159,22 @@ header nav ul li a:hover {
 .recent-routes h3 {
     text-align: center;
     margin-bottom: 30px;
+}
+
+.nearby_routes h3 {
+    margin: 30px;
+}
+
+.pending_route h3 {
+    margin:30px;
+}
+
+.past_route h3 {
+    margin:30px;
+}
+
+.routes-grid {
+    margin:30px;
 }
 
 .routes-grid {
@@ -226,8 +228,4 @@ footer {
     height: 400px;
     position: relative;
     margin-bottom: 20px;
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 3e40817649ec837e0178bd7f6c9fbb584b397264
