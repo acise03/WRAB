@@ -29,9 +29,16 @@
         </nav>
     </header>
 
-    <section class="welcome">
-        <h2>Welcome!</h2>
-        <p>[description]</p>
+    <section class="input-route">
+        <form id="routeForm">
+            <label for="startCoord">Start Coordinate:</label>
+            <input type="text" id="startCoord" name="startCoord" placeholder="LONGITUDE, LATITUDE" required>
+            <br>
+            <label for="endCoord">End Coordinate:</label>
+            <input type="text" id="endCoord" name="endCoord" placeholder="LONGITUDE, LATITUDE" required>
+            <br>
+            <button type="button" onclick="addRoute()">Add Route</button>
+        </form>
     </section>
 
     <section class="joes-map">
@@ -43,30 +50,11 @@
                 center: [-79.440304, 43.903823],
                 zoom: 14
             });
+
+
         </script>
     </section>
-
-    <section class="nearby_routes">
-        <h3>Routes Near You</h3>
-        <div class="routes-grid">
-            <div class="route-card">
-                <h4>close1</h4>
-                <p>description</p>
-                <a href="#" class="view-route">View Route</a>
-            </div>
-
-            <div class="route-card">
-                <h4>close2</h4>
-                <p>description</p>
-                <a href="#" class="view-route">View Route</a>
-            </div>
-            <div class="route-card">
-                <h4>close2</h4>
-                <p>description</p>
-                <a href="#" class="view-route">View Route</a>
-            </div>
-        </div>
-    </section>
+    <script src="script.js"></script>
 
     <footer>
         <p>By Grace, Jessica, Olivia and Sophia</p>
