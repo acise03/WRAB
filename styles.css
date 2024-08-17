@@ -1,6 +1,9 @@
 /* General Styles */
+
 body {
-    font-family:'Questrial';
+    margin-left: 20px;
+    margin-top: 20px;
+	font-family: Antic;  
     margin: 0;
     padding: 0;
     background-color: #EBEBEB;
@@ -13,6 +16,7 @@ header {
 }
 
 header h1 {
+    font-family: Bowlby One SC;
     display: inline-block;
     margin-left: 20px;
 }
@@ -24,6 +28,7 @@ header nav ul {
 }
 
 header nav ul li {
+
     display: inline-block;
     margin-left: 20px;
 }
