@@ -15,11 +15,12 @@
 </head>
 
 <body>
-    <!-- Header Section -->
     <header>
         <nav>
             <ul>
-                <li><h1>WABR</h1></li>
+                <li>
+                    <h1>WABR</h1>
+                </li>
                 <li><a href="index.html">HOME</a></li>
                 <li><a href="create.html">CREATE A ROUTE</a></li>
                 <li><a href="generate.html">GENERATE A ROUTE</a></li>
@@ -29,51 +30,44 @@
         </nav>
     </header>
 
-    <section class="welcome">
-        <h2>Welcome!</h2>
-        <p>[description]</p>
-    </section>
+    <script src="marker.js"></script>
 
-    <section class="joes-map">
-        <div id="map" style="width: 100%; height: 600px;"></div>
-        <script>
-            var map = tt.map({
-                key: "iJhhowAaIrAcbRVdJLMHfrj5e4v2VekB",
-                container: "map",
-                center:  [-79.43898010253906, 43.903018951416016],
-                zoom: 14
-            });
+    <div class="container">
+        <div class="options">
+            <section class="input-route">
+                <button type="button" class="button-5" role="button" onclick="addMarker()">ADD A HOTSPOT</button>
+                <br>
 
-        </script>
-    </section>
+                <select id="markerDropdown">
+                    <option value="waterFountain.png">Water Fountain</option>
+                    <option value="washroom.png">Washroom</option>
+                    <option value="electricalOutlet.png">Electrical Outlet</option>
+                    <option value="playground.png">Playground</option>
+                    <option value="openField.png">Open Field</option>
+                </select>
 
-    <section class="nearby_routes">
-        <h3>Routes Near You</h3>
-        <div class="routes-grid">
-            <div class="route-card">
-                <h4>close1</h4>
-                <p>description</p>
-                <a href="#" class="view-route">View Route</a>
-            </div>
+                <div id="map" style="width: 100%; height: 500px;"></div>
 
-            <div class="route-card">
-                <h4>close2</h4>
-                <p>description</p>
-                <a href="#" class="view-route">View Route</a>
-            </div>
-            <div class="route-card">
-                <h4>close2</h4>
-                <p>description</p>
-                <a href="#" class="view-route">View Route</a>
-            </div>
+            </section>
         </div>
-    </section>
+        <div id="exploreMap">
+            <script>
+                var map = tt.map({
+                    key: "iJhhowAaIrAcbRVdJLMHfrj5e4v2VekB",
+                    container: "exploreMap",
+                    center: [-79.43898010253906, 43.903018951416016],
+                    zoom: 14
+                });
+
+            </script>
+        </div>
+
+    </div>
 
     <footer>
         <p>By Grace, Jessica, Olivia and Sophia</p>
     </footer>
 
-    <script src="script.js"></script>
 </body>
 
 </html>

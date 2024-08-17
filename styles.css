@@ -199,7 +199,6 @@ header nav ul li a:hover {
     color: #52489C;
     margin-bottom: 15px;
 }
-
 .view-route {
     background-color: #84A98C;
     color: #EBEBEB;
@@ -222,12 +221,13 @@ footer {
 .joes-map {
     display: block;
 }
-
-.map {
+.container{
+    display: flex;
     width: 100%;
+}
+#options{
+    width:25%;
     height: 400px;
-    position: relative;
-    margin-bottom: 20px;
 }
 .button-5 {
     align-items: center;
@@ -257,6 +257,15 @@ footer {
     vertical-align: baseline;
     width: auto;
   }
+
+#exploreMap{
+    width: 75%;
+    height: 400px;
+    margin-left: auto;
+    margin-right: 0;
+    display: block;
+
+}
   
   .button-5:hover,
   .button-5:focus {
@@ -274,3 +283,10 @@ footer {
     transform: translateY(0);
   }
   
+
+.map {
+    width: 100%;
+    height: 400px;
+    position: relative;
+    margin-bottom: 20px;
+}
