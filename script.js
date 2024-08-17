@@ -1,9 +1,7 @@
 function addRoute() {
-    // Get user input
     const startCoord = document.getElementById('startCoord').value.split(',').map(Number);
     const endCoord = document.getElementById('endCoord').value.split(',').map(Number);
     
-    // Create GeoJSON for the new route
     const newRouteGeoJson = {
         "type": "FeatureCollection",
         "features": [
@@ -16,14 +14,10 @@ function addRoute() {
                         endCoord
                     ]
                 },
-                "properties": {
-                    "name": routeName
-                }
             }
         ]
     };
     
-    // Add the new route to the map
     map.addLayer({
         id: 'userRoute',
         type: 'line',
@@ -41,6 +35,4 @@ function addRoute() {
         }
     });
     
-    // Optionally, save the route data for later use
-    // localStorage.setItem('userRoute', JSON.stringify(newRouteGeoJson));
 }
