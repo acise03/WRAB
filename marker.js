@@ -1,15 +1,28 @@
 let imageUrl = '';
 let map;
 let marker;
+let showOrHide = false;
+let deleatble = false;
+let shownMarkers = [];
 function toggleMode() {
     alert(`Drag the logo`);
 }
-function saved(){
+function saved() {
     alert("The marker has been saved.");
+}
+function del() {
+    if (deleatble) {
+        marker.remove();
+        deleatble = false;
+
+    }
+    else {
+        alert("There is no marker to be deleted.")
+    }
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-     map = tt.map({
+    map = tt.map({
         key: "iJhhowAaIrAcbRVdJLMHfrj5e4v2VekB",
         container: "exploreMap",
         center: [-79.43898010253906, 43.903018951416016],
@@ -53,7 +66,11 @@ const marker_data = [
 
 
 function saveLocation() {
-    if (marker) {
+    if (!deleatble) {
+        alert("There is no marker to be saved.")
+
+    }
+    else if (marker) {
         const lngLat = marker.getLngLat();
         var dd = document.getElementById("markerDropdown");
         var selected = dd.value;
@@ -65,8 +82,10 @@ function saveLocation() {
             type: selected
         })
         saved();
+        marker.remove();
         console.log(marker_data);
     }
+    deleatble = false;
 }
 
 function addMarker() {
@@ -81,6 +100,7 @@ function addMarker() {
         .setLngLat(map.getCenter())
         .addTo(map)
         .setDraggable(true);
+    deleatble = true;
 
 }
 
@@ -113,11 +133,22 @@ function createMarkerElement(imageUrl) {
 
 
 function showMarkers() {
-    marker_data.forEach(markerr => {
-        new tt.Marker({
-            element: createMarkerElement(markerr.type)
+    if (showOrHide) { //true means markers are shown
+        shownMarkers.forEach(mar => mar.remove());
+        shownMarkers = [];
+        showOrHide = false;
+
+    }
+    else { //false means markers are hidden
+        marker_data.forEach(markerr => {
+            const mark = new tt.Marker({
+                element: createMarkerElement(markerr.type)
+            })
+                .setLngLat([markerr.lng, markerr.lat])
+                .addTo(map)
+            shownMarkers.push(mark);
         })
-            .setLngLat([markerr.lng, markerr.lat])
-            .addTo(map)
-    })
+        showOrHide = true;
+
+    }
 }

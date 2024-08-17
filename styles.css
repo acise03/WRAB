@@ -270,8 +270,7 @@ footer {
 
 }
 
-.button-5:hover,
-.button-5:focus {
+.button-5:hover{
     background-color: #837cbb;
     box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
 }
