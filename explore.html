@@ -12,41 +12,26 @@
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Bowlby+One+SC" />
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Antic" />
     <script src="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.25.0/maps/maps-web.min.js"></script>
-    <script src="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.25.0/services/services-web.min.js"></script>
-
 </head>
 
 <body>
     <!-- Header Section -->
     <header>
         <nav>
-            <h1>WRAB</h1>
             <ul>
+                <li><h1>WABR</h1></li>
                 <li><a href="index.html">HOME</a></li>
-                <li><a href="add.html">ADD</a></li>
-                <li><a href="addARoute.html">ADD A ROUTE</a></li>
+                <li><a href="create.html">CREATE A ROUTE</a></li>
+                <li><a href="generate.html">GENERATE A ROUTE</a></li>
                 <li><a href="routes.html">ROUTES</a></li>
-                <li><a href="#">EXPLORE</a></li>
-                <li><a href="#">LOGIN</a></li>
+                <li><a href="explore.html">EXPLORE</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="input-route">
-        <form id="routeForm">
-            <label for="routeName">Route Name:</label>
-            <input type="text" id="routeName" name="routeName" placeholder="Route Name">
-            <br>
-            <label for="startCoord">Start Coordinate:</label>
-            <input type="text" id="startCoord" name="startCoord" placeholder="LONGITUDE, LATITUDE">
-            <button id="startCoordButton">Choose on Map</button>
-            <br>
-            <label for="endCoord">End Coordinate:</label>
-            <input type="text" id="endCoord" name="endCoord" placeholder="LONGITUDE, LATITUDE">
-            <button id="endCoordButton">Choose on Map</button>
-            <br>
-            <button type="button" onclick="addRoute()">Add Route</button>
-        </form>
+    <section class="welcome">
+        <h2>Welcome!</h2>
+        <p>[description]</p>
     </section>
 
     <section class="joes-map">
@@ -55,19 +40,40 @@
             var map = tt.map({
                 key: "iJhhowAaIrAcbRVdJLMHfrj5e4v2VekB",
                 container: "map",
-                center: [-79.43994494509955, 43.90274206488957],
+                center:  [-79.43898010253906, 43.903018951416016],
                 zoom: 14
             });
 
-
         </script>
     </section>
-    <script src="addRoute.js"></script>
+
+    <section class="nearby_routes">
+        <h3>Routes Near You</h3>
+        <div class="routes-grid">
+            <div class="route-card">
+                <h4>close1</h4>
+                <p>description</p>
+                <a href="#" class="view-route">View Route</a>
+            </div>
+
+            <div class="route-card">
+                <h4>close2</h4>
+                <p>description</p>
+                <a href="#" class="view-route">View Route</a>
+            </div>
+            <div class="route-card">
+                <h4>close2</h4>
+                <p>description</p>
+                <a href="#" class="view-route">View Route</a>
+            </div>
+        </div>
+    </section>
 
     <footer>
         <p>By Grace, Jessica, Olivia and Sophia</p>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 
 </html>
