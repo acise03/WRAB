@@ -55,7 +55,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #000;
+    font-weight: bolder;
 }
 
 nav a::before {
