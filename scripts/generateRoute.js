@@ -1,10 +1,16 @@
 var mode = null;
-const API_KEY = 'iJhhowAaIrAcbRVdJLMHfrj5e4v2VekB';
+import { API_KEY } from 'SECRET.js';
 const EARTH_R = 6378.137;
 
 function toggleMode(button) {
     mode = button;
-    alert(`Choose ${button} on map.`);
+    let toastBox = document.getElementById('toastBox');
+    let toast = document.createElement('div');
+    toast.classList.add('toast');
+    toast.innerHTML = '<i class="fa-solid fa-arrow-pointer"></i> Click on the map!';
+    toastBox.appendChild(toast);
+    toastAppear = true;
+    setTimeout(() => { toast.remove(); }, 3000);
 }
 
 map.on('click', (event) => {
@@ -18,7 +24,7 @@ map.on('click', (event) => {
 document.getElementById('startCoordButton').addEventListener('click', (event) => { event.preventDefault(); toggleMode('start') });
 
 function getEnd(start, dist) {
-    const half = 0.4 * dist;
+    const half = 0.3 * dist;
     const theta = 2 * Math.PI * Math.random();
 
     const s_longitutde = start[0] * Math.PI / 180;
@@ -29,15 +35,15 @@ function getEnd(start, dist) {
 
     end = [e_longitutde, e_latitutde];
 
+
     return end;
 }
 
-async function generateRoute() {
+async function genRoute() {
     const routeName = document.getElementById('routeName').value;
     const distance = document.getElementById('distance').value;
     const startCoord = document.getElementById('startCoord').value.split(',').map(Number);
     const endCoord = getEnd(startCoord, distance);
-
 
     var response = await tt.services.calculateRoute({
         key: API_KEY,
@@ -46,6 +52,30 @@ async function generateRoute() {
     });
 
     var newRouteGeoJson = response.toGeoJson();
+
+
+    return newRouteGeoJson;
+}
+
+async function generateRoute() {
+    const distance = document.getElementById('distance').value;
+    var cnt = 0;
+    var newRouteGeoJson = await genRoute();
+    var tmpRouteGeoJson;
+    var currDistance = newRouteGeoJson.features[0].properties.summary.lengthInMeters / 1000.0;
+    var tmpDistance = currDistance;
+
+
+    while (cnt < 10 && Math.abs(distance - currDistance) > 0.25) {
+        tmpRouteGeoJson = await genRoute();
+        tmpDistance = tmpRouteGeoJson.features[0].properties.summary.lengthInMeters / 1000.0;
+        if (Math.abs(distance - tmpDistance) < Math.abs(distance - currDistance)) {
+            newRouteGeoJson = tmpRouteGeoJson;
+            currDistance = tmpDistance;
+        }
+        cnt++;
+        console.log(cnt + " " + tmpDistance);
+    }
 
     if (map.getLayer("route"))
         map.removeLayer("route");

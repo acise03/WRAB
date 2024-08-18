@@ -17,7 +17,6 @@
 </head>
 
 <body>
-    <!-- Header Section -->
     <header>
         <!-- Logo -->
         <div class="container">
@@ -29,7 +28,7 @@
                 <li><a href="index.html">HOME</a></li>
                 <li><a href="create.html">CREATE A ROUTE</a></li>
                 <li><a href="generate.html">GENERATE A ROUTE</a></li>
-                <li><a href="routes.html">ROUTES</a></li>
+                <li><a href="routes.html">POPULAR ROUTES</a></li>
                 <li><a href="explore.html">EXPLORE</a></li>
             </ul>
         </nav>
@@ -41,7 +40,7 @@
             <input type="text" id="routeName" name="routeName" placeholder="Route Name">
             <br>
             <label for="distance">Select distance: </label>
-            <select id="distance" name="distance">
+            <select id="distance" name="distance" class="dropdown">
                 <option value="1">1k</option>
                 <option value="2">2k</option>
                 <option value="3">3k</option>
@@ -51,13 +50,14 @@
             <br>
             <label for="startCoord">Start Coordinate:</label>
             <input type="text" id="startCoord" name="startCoord" placeholder="LONGITUDE, LATITUDE">
-            <button id="startCoordButton">Choose on Map</button>
+            <button class="button" id="startCoordButton">Choose on Map</button>
             <br>
-            <button type="button" onclick="generateRoute()">Generate Route</button>
+            <button class="button" type="button" onclick="generateRoute()">Generate Route</button>
         </form>
     </section>
 
     <section class="information">
+        <div id="toastBox"></div>
         <h1>Route Distance: <span id="routeDistance">0</span> km</h1>
     </section>
 
@@ -67,7 +67,7 @@
             var map = tt.map({
                 key: "iJhhowAaIrAcbRVdJLMHfrj5e4v2VekB",
                 container: "map",
-                center: [-79.43994494509955, 43.90274206488957],
+                center: [-79.4391775, 43.9029436],
                 zoom: 14
             });
         </script>
