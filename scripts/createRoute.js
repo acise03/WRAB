@@ -25,7 +25,6 @@ document.getElementById('endCoordButton').addEventListener('click', (event) => {
 
 
 async function addRoute() {
-    const routeName = document.getElementById('routeName').value;
     const startCoord = document.getElementById('startCoord').value.split(',').map(Number);
     const endCoord = document.getElementById('endCoord').value.split(',').map(Number);
 

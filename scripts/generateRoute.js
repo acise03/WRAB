@@ -41,7 +41,6 @@ function getEnd(start, dist) {
 }
 
 async function genRoute() {
-    const routeName = document.getElementById('routeName').value;
     const distance = document.getElementById('distance').value;
     const startCoord = document.getElementById('startCoord').value.split(',').map(Number);
     const endCoord = getEnd(startCoord, distance);
