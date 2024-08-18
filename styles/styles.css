@@ -355,8 +355,7 @@ footer {
     margin-bottom: 20px;
 }
 
-/*Moving logo in nav bar*/
-.logo{
+.logo {
     position: absolute;
     height: auto;
     height: 221.8px;
@@ -366,7 +365,7 @@ footer {
     margin-top: 1px;
 }
 
-.logo-small{
+.logo-small {
     position: absolute;
     height: auto;
     height: 66.54px;
@@ -374,6 +373,8 @@ footer {
     margin-left: 40px;
     margin-right: 540px;
     margin-top: -10px;
+}
+
 .routes-grid {
     display: flex;
     justify-content: space-between;
