@@ -1,6 +1,24 @@
 API_KEY = "iJhhowAaIrAcbRVdJLMHfrj5e4v2VekB";
 const EARTH_R = 6378.137;
 
+document.addEventListener('DOMContentLoaded', () => {
+    const applyBorder = e => {
+        const inputRoute = e.target.
+            parentElement;
+        inputRoute.classList.toggle('outline')
+    }
+
+    const inputs = document.querySelectorAll
+        ('input')
+
+    inputs.forEach(input => {
+        input.addEventListener('focus', e =>
+            applyBorder(e));
+        input.addEventListener('blur', e =>
+            applyBorder(e));
+    })
+})
+
 var mode = null;
 
 function toggleMode(button) {
