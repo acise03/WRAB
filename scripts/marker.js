@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
     map = tt.map({
         key: "iJhhowAaIrAcbRVdJLMHfrj5e4v2VekB",
         container: "exploreMap",
-        center: [-79.43898010253906, 43.903018951416016],
+        center: [-79.4391775, 43.9029436], 
         zoom: 14
     });
 
@@ -46,32 +46,32 @@ const marker_data = [
     {
         "lat": 43.90691488643688,
         "lng": -79.43265008926438,
-        "type": "images/waterFountain.png"
+        "type": "waterFountain.png"
     },
     {
         "lat": 43.90273360044873,
         "lng": -79.43924041964709,
-        "type": "images/washroom.png"
+        "type": "washroom.png"
     },
     {
         "lat": 43.89416916908877,
         "lng": -79.44163397813762,
-        "type": "images/electricalOutlet.png"
+        "type": "electricalOutlet.png"
     },
     {
         "lat": 43.90303565410969,
         "lng": -79.43744353247858,
-        "type": "images/playground.png"
+        "type": "playground.png"
     },
     {
         "lat": 43.90170408271908,
         "lng": -79.43232710931164,
-        "type": "images/openField.png"
+        "type": "openField.png"
     },
     {
         "lat": 43.89537517312877,
         "lng": -79.44312656330553,
-        "type": "images/washroom.png"
+        "type": "washroom.png"
     }
 ];
 
@@ -92,7 +92,13 @@ function saveLocation() {
             type: selected
         });
         saved();
-        marker.remove();
+        if (showOrHide) {
+            shownMarkers.push(marker);
+        }
+        else {
+            marker.remove();
+
+        }
         console.log(marker_data);
     }
     deleatble = false;
@@ -117,14 +123,17 @@ function addMarker() {
 
 document.getElementById('markerDropdown').addEventListener('change', function (event) {
     if (marker) {
+        const current = marker.getLngLat();
         marker.remove();
-    }
-    marker = new tt.Marker({
-        element: createMarkerElement("../images/" + document.getElementById('markerDropdown').value)
+        marker = new tt.Marker({
+            element: createMarkerElement("../images/" + document.getElementById('markerDropdown').value)
 
-    })
-        .setLngLat(marker ? marker.getLngLat() : [-79.43898010253906, 43.903018951416016])
-        .addTo(map);
+        })
+            .setLngLat(current)
+            .addTo(map)
+            .setDraggable(true);
+
+    }
 });
 
 function createMarkerElement(imageUrl) {
