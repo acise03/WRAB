@@ -39,7 +39,7 @@
             <input type="text" id="routeName" name="routeName" placeholder="Route Name">
             <br>
             <label for="distance">Select distance: </label>
-            <select id="distance" name="distance">
+            <select id="distance" name="distance" class="dropdown">
                 <option value="1">1k</option>
                 <option value="2">2k</option>
                 <option value="3">3k</option>
@@ -49,9 +49,9 @@
             <br>
             <label for="startCoord">Start Coordinate:</label>
             <input type="text" id="startCoord" name="startCoord" placeholder="LONGITUDE, LATITUDE">
-            <button id="startCoordButton">Choose on Map</button>
+            <button class="button" id="startCoordButton">Choose on Map</button>
             <br>
-            <button type="button" onclick="generateRoute()">Generate Route</button>
+            <button class="button" type="button" onclick="generateRoute()">Generate Route</button>
         </form>
     </section>
 
