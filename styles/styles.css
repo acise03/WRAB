@@ -399,5 +399,11 @@ footer {
 }
 
 .logo-small{
-#continue here using before stuff
+    position: absolute;
+    height: auto;
+    height: 66.54px;
+    width: 60px;
+    margin-left: 40px;
+    margin-right: 540px;
+    margin-top: -10px;
 }
