@@ -82,13 +82,14 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 110px;
 }
 
 header nav ul h1 {
     font-family: Sigmar One;
     display: inline-block;
     text-align: left;
-    margin-left: 20px;
+    margin-left: 60px;
     margin-right: 540px;
 }
 
@@ -384,4 +385,19 @@ footer {
     height: 600px;
     position: relative;
     margin-bottom: 20px;
+}
+
+/*Moving logo in nav bar*/
+.logo{
+    position: absolute;
+    height: auto;
+    height: 221.8px;
+    width: 200px;
+    margin-left: 30px;
+    margin-right: 540px;
+    margin-top: 1px;
+}
+
+.logo-small{
+#continue here using before stuff
 }
