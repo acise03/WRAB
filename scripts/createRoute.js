@@ -11,7 +11,6 @@ function toggleMode(button) {
     setTimeout(() => { toast.remove(); }, 3000);
 }
 
-
 map.on('click', (event) => {
     if (mode) {
         const coords = [event.lngLat.lng, event.lngLat.lat];
@@ -23,11 +22,11 @@ map.on('click', (event) => {
 document.getElementById('startCoordButton').addEventListener('click', (event) => { event.preventDefault(); toggleMode('start') });
 document.getElementById('endCoordButton').addEventListener('click', (event) => { event.preventDefault(); toggleMode('end') });
 
+
 async function addRoute() {
     const routeName = document.getElementById('routeName').value;
     const startCoord = document.getElementById('startCoord').value.split(',').map(Number);
     const endCoord = document.getElementById('endCoord').value.split(',').map(Number);
-
 
     var response = await tt.services.calculateRoute({
         key: API_KEY,
@@ -56,4 +55,9 @@ async function addRoute() {
 
     const distanceText = document.getElementById("routeDistance");
     distanceText.textContent = newRouteGeoJson.features[0].properties.summary.lengthInMeters / 1000.0;
+
+    var bound = new tt.LngLatBounds();
+    bound.extend(tt.LngLat.convert(startCoord));
+    bound.extend(tt.LngLat.convert(endCoord));
+    map.fitBounds(bound, { padding: 20 });
 }
