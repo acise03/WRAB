@@ -122,8 +122,10 @@ header nav ul li a:hover {
 }
 
 .welcome h2 {
-    font-size: 2.5em;
+    font-size: 3em;
     margin-bottom: 20px;
+    margin-top: 20px;
+    
 }
 
 .welcome p {
@@ -140,7 +142,7 @@ header nav ul li a:hover {
 }
 
 .input-route {
-    margin: 30px;
+    margin: 0px;
 }
 
 .cta-button {
@@ -156,61 +158,27 @@ header nav ul li a:hover {
     background-color: #59C3C3;
 }
 
-.recent-routes {
-    padding: 40px 20px;
-    background-color: #EBEBEB;
-}
-
-.recent-routes h3 {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.nearby_routes h3 {
-    margin: 30px;
-}
-
-.pending_route h3 {
-    margin: 30px;
-}
-
-.past_route h3 {
-    margin: 30px;
-}
 
 .routes-grid {
     margin: 30px;
 }
 
-.routes-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
 
 .route-card {
     background-color: #EBEBEB;
-    padding: 20px;
-    border-radius: 5px;
+    padding: 0px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
-.route-card h4 {
-    margin-bottom: 10px;
-}
-
 .route-card p {
     color: #52489C;
-    margin-bottom: 15px;
 }
 
 .view-route {
     background-color: #84A98C;
     color: #EBEBEB;
-    padding: 10px 20px;
     text-decoration: none;
-    border-radius: 5px;
 }
 
 .view-route:hover {
@@ -385,3 +353,28 @@ footer {
     position: relative;
     margin-bottom: 20px;
 }
+.routes-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.route-card {
+    flex: 1;
+    padding: 30px;
+    background-color: #f0f0f0;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 16px 16px rgba(0, 0, 0, 0.1);
+}
+
+.route-card h4 {
+    margin-bottom: 10px;
+    font-family: 'Sigmar One', cursive;
+}
+
+.route-card p {
+    font-family: 'Antic', sans-serif;
+    margin-bottom: 20px;
+}
+
