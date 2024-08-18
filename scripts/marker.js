@@ -1,3 +1,5 @@
+import { API_KEY } from 'SECRET.js';
+
 let map;
 let marker;
 let showOrHide = false;
@@ -34,9 +36,9 @@ function del() {
 
 document.addEventListener('DOMContentLoaded', function () {
     map = tt.map({
-        key: "iJhhowAaIrAcbRVdJLMHfrj5e4v2VekB",
+        key: API_KEY,
         container: "exploreMap",
-        center: [-79.4391775, 43.9029436], 
+        center: [-79.4391775, 43.9029436],
         zoom: 14
     });
 

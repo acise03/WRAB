@@ -1,5 +1,6 @@
+import { API_KEY } from 'SECRET.js';
+
 var mode = null;
-const API_KEY = 'iJhhowAaIrAcbRVdJLMHfrj5e4v2VekB';
 
 function toggleMode(button) {
     mode = button;
