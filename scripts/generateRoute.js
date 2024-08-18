@@ -1,6 +1,7 @@
-var mode = null;
-import { API_KEY } from 'SECRET.js';
+API_KEY = "iJhhowAaIrAcbRVdJLMHfrj5e4v2VekB";
 const EARTH_R = 6378.137;
+
+var mode = null;
 
 function toggleMode(button) {
     mode = button;
