@@ -122,15 +122,17 @@ header nav ul li a:hover {
 }
 
 .welcome h2 {
-    font-size: 3em;
-    margin-bottom: 20px;
+    font-size: 2.5em;
+    margin-bottom: 60px;
     margin-top: 20px;
 
 }
 
 .welcome p {
-    font-size: 1.2em;
-    margin-bottom: 30px;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    margin-left: 80px;
+    margin-right: 80px;
 }
 
 .forms {
