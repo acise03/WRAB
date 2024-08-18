@@ -1,4 +1,4 @@
-import { API_KEY } from 'SECRET.js';
+API_KEY = "iJhhowAaIrAcbRVdJLMHfrj5e4v2VekB";
 
 let map;
 let marker;
