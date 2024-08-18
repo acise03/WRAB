@@ -46,9 +46,10 @@
             </select>
             <br>
             <label for="startCoord">Start Coordinate:</label>
-            <input type="text" id="startCoord" name="startCoord" placeholder="LONGITUDE, LATITUDE">
             <button class="button" id="startCoordButton">Choose on Map</button>
-            <br>
+            <div class="input-container">
+                <input type="text" id="startCoord" name="startCoord" placeholder="LONGITUDE, LATITUDE">
+            </div>
             <button class="button" type="button" onclick="generateRoute()">Generate Route</button>
         </form>
     </section>

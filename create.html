@@ -36,15 +36,19 @@
 
     <section class="forms">
         <form id="routeForm">
-            <label for="startCoord">Start Coordinate:</label>
-            <input type="text" id="startCoord" name="startCoord" placeholder="LONGITUDE, LATITUDE">
-            <button class="button" id="startCoordButton">Choose on Map</button>
+            <label for="startCoord">Start Coordinate:</label> <button class="button" id="startCoordButton">Choose on
+                Map</button>
+            <div class="input-container">
+                <input type="text" id="startCoord" name="startCoord" placeholder="LONGITUDE, LATITUDE">
+            </div>
             <br>
-            <label for="endCoord">End Coordinate:</label>
-            <input type="text" id="endCoord" name="endCoord" placeholder="LONGITUDE, LATITUDE">
-            <button class="button" id="endCoordButton">Choose on Map</button>
+            <label for="endCoord">End Coordinate:</label> <button class="button" id="endCoordButton">Choose on
+                Map</button>
+            <div class="input-container">
+                <input type="text" id="endCoord" name="endCoord" placeholder="LONGITUDE, LATITUDE">
+            </div>
             <br>
-            <button class="button" type="button" onclick="addRoute()">Create Route</button>
+            <button type="button" class="button" onclick="addRoute()">Create Route</button>
         </form>
     </section>
 
