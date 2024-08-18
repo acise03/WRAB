@@ -113,7 +113,7 @@ function addMarker() {
     }
 
     marker = new tt.Marker({
-        element: createMarkerElement("../images/" + document.getElementById('markerDropdown').value)
+        element: createMarkerElement("./images/" + document.getElementById('markerDropdown').value)
     })
         .setLngLat(map.getCenter())
         .addTo(map)
@@ -128,7 +128,7 @@ document.getElementById('markerDropdown').addEventListener('change', function (e
         const current = marker.getLngLat();
         marker.remove();
         marker = new tt.Marker({
-            element: createMarkerElement("../images/" + document.getElementById('markerDropdown').value)
+            element: createMarkerElement("./images/" + document.getElementById('markerDropdown').value)
 
         })
             .setLngLat(current)
@@ -162,7 +162,7 @@ function showMarkers() {
     else { //false means markers are hidden
         marker_data.forEach(markerr => {
             const mark = new tt.Marker({
-                element: createMarkerElement("../images/" + markerr.type)
+                element: createMarkerElement("./images/" + markerr.type)
             })
                 .setLngLat([markerr.lng, markerr.lat])
                 .addTo(map)
